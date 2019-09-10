@@ -2,11 +2,13 @@ import React from 'react';
 import IssuesContainer from './containers/IssuesContainer';
 import IssuesSelectionContainer from './containers/IssueSelectionContainer'
 import './App.css';
+import Login from './components/Login'
 
 function App() {
   return (
-    <div className="App">
-        <IssuesSelectionContainer />
+    <div>
+      <Login />
+        {/* <IssuesSelectionContainer /> */}
     </div>
   );
 }
