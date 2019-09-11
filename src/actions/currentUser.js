@@ -9,16 +9,24 @@ export const setCurrentUser = user => {
 
 
 // ASCYNCHRONOUS ACTION CREATORS
-export const login = credentials => {console.log('here in the login action')
+export const login = credentials => {
+    return dispatch = {
         return fetch("http://localhost:3000/login", {
+            credentials: "include",
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(credentials)
         })
-        
-    
+        .then(r => r.json())
+        .then(user => {
+            if (user.error) {
+                alert(user.error)
+            }else{
+                dispatch(setCurrentUser(user))
+            }
+        })
+    }
 
-    
 }
