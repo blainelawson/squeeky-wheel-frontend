@@ -3,14 +3,24 @@ import IssuesContainer from './containers/IssuesContainer';
 import IssuesSelectionContainer from './containers/IssueSelectionContainer'
 import './App.css';
 import Login from './components/Login'
+import {connect} from 'react-redux'
+import { getCurrentUser } from './actions/currentUser'
 
-function App() {
-  return (
-    <div>
-      <Login />
-        {/* <IssuesSelectionContainer /> */}
-    </div>
-  );
+class App extends React.Component {
+
+  componentDidMount(){
+    console.log('component mounted')
+    this.props.getCurrentUser()
+  }
+
+  render(){
+    return (
+      <div>
+        <Login />
+          {/* <IssuesSelectionContainer /> */}
+      </div>
+    );
+  }
 }
 
-export default App;
+export default connect(null, { getCurrentUser })(App);

@@ -9,13 +9,13 @@ export const setCurrentUser = user => {
 
 
 // ASCYNCHRONOUS ACTION CREATORS
-export function login(loginCredentials) {
-    return (dispatch) => {
-        fetch("http://localhost:3000/login", {
-            credentials: "include",
+export const login = loginCredentials => {
+    return (dispatch) =>  {
+        return fetch("http://localhost:3000/login", {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                'Accept': 'application/json'
             },
             body: JSON.stringify(loginCredentials)
         })
@@ -27,6 +27,30 @@ export function login(loginCredentials) {
                 dispatch(setCurrentUser(user))
             }
         })
+        .catch(console.log)
+    }
+
+}
+
+export const getCurrentUser = () => {
+    console.log('getting current user')
+    return (dispatch) =>  {
+        return fetch("http://localhost:3000/get_current_user", {
+            credentials: "include",
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+        .then(r => r.json())
+        .then(user => {
+            if (user.error) {
+                alert(user.error)
+            }else{
+                dispatch(setCurrentUser(user))
+            }
+        })
+        .catch(console.log)
     }
 
 }

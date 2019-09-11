@@ -1,5 +1,5 @@
 export default (state= null, action) => {
-    debugger
+    // debugger
     console.log('hello ', action.user, ' from currentUser reducer')
     switch (action.type) {
         case "SET_CURRENT_USER":
