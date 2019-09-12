@@ -1,11 +1,9 @@
 import React from 'react';
-import IssuesContainer from './containers/IssuesContainer';
 import IssuesSelectionContainer from './containers/IssueSelectionContainer'
 import './App.css';
-import Login from './components/Login'
-import Logout from './components/Logout'
 import {connect} from 'react-redux'
 import { getCurrentUser } from './actions/currentUser'
+import NavBar from './components/NavBar'
 
 class App extends React.Component {
 
@@ -15,7 +13,10 @@ class App extends React.Component {
 
   render(){
     return (
-        this.props.currentUser ? <Logout /> : <Login />
+      <div>
+        <NavBar />
+        {this.props.currentUser ? <IssuesSelectionContainer /> : ""}
+      </div>
     );
   }
 }
