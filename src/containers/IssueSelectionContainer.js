@@ -22,10 +22,10 @@ export default class IssueSelectionContainer extends React.Component {
                         style={{
                             backgroundColor: 'red'
                         }}>
-                        {/* <CartContainer 
+                        <CartContainer 
                             style={{
                                 backgroundColor: 'red'
-                        }}/> */}
+                        }}/>
                     </div>
                 </div>
                 <div className="ui vertical divider">

@@ -14,7 +14,6 @@ class IssuesContainer extends React.Component {
     }
 
     componentDidMount(){
-        console.log('issuescontainer did mount')
         this.props.fetchIssues()
     }
     
@@ -34,7 +33,7 @@ class IssuesContainer extends React.Component {
     }
 }
 
-const mapStateToProps = (state) => {debugger
+const mapStateToProps = (state) => {
     return {
         issues: state.issueReducer.issues
     }
