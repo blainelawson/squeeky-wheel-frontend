@@ -1,7 +1,14 @@
 export function fetchIssues(){
 
     return (dispatch) => {
-        fetch('http://localhost:3000/api/v1/issues')
+        console.log("fetching issues")
+        fetch('http://localhost:3000/api/v1/issues',{
+            // credentials: "include",
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
         .then(res => res.json())
         .then(issues => dispatch({
             type: 'FETCH_ISSUES',    
