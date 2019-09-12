@@ -14,7 +14,7 @@ class CartContainer extends React.Component {
     }
 
     componentDidMount(){
-        this.props.fetchUserIssues()
+        this.props.fetchUserIssues(this.props.currentUser)
     }
     
     render() {
@@ -23,7 +23,7 @@ class CartContainer extends React.Component {
         style={{
             backgroundColor: 'red'
         }}>
-            {this.props.issues.map(issue => {
+            {this.props.userIssues.map(issue => {
 
                 return <div className="card"><IssueCard name={issue.name} desc={issue.desc} date={issue.date} /></div>
             })}
@@ -32,9 +32,10 @@ class CartContainer extends React.Component {
     }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = ( state ) => {
     return {
-        issues: state.issues
+        currentUser: state.currentUser,
+        userIssues: state.issueReducer.userIssues
     }
 }
 
