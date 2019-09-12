@@ -14,6 +14,7 @@ class IssuesContainer extends React.Component {
     }
 
     componentDidMount(){
+        console.log('issuescontainer did mount')
         this.props.fetchIssues()
     }
     
@@ -24,7 +25,6 @@ class IssuesContainer extends React.Component {
             style={{
                 backgroundColor: 'red'
             }}>
-
             {this.props.issues.map(issue => {
 
                 return <div className="card"><IssueCard name={issue.name} desc={issue.desc} date={issue.date} /></div>
@@ -34,9 +34,9 @@ class IssuesContainer extends React.Component {
     }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state) => {debugger
     return {
-        issues: state.issues
+        issues: state.issueReducer.issues
     }
 }
 
