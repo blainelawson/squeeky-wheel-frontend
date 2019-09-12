@@ -1,16 +1,11 @@
 import React from 'react';
-import IssuesSelectionContainer from './containers/IssueSelectionContainer'
 import './App.css';
 import {connect} from 'react-redux'
 import { getCurrentUser } from './actions/currentUser'
 import NavBar from './components/NavBar'
-import Welcome from './components/Welcome'
+import MainContainer from './containers/MainContainer';
 
 class App extends React.Component {
-
-  componentDidMount(){
-    this.props.getCurrentUser()
-  }
 
   render(){
     return (
@@ -18,7 +13,7 @@ class App extends React.Component {
         backgroundColor: "#B6CCE1"
     }}>
         <NavBar />
-        {this.props.currentUser ? <IssuesSelectionContainer /> : <Welcome />}
+        <MainContainer />
       </div>
     );
   }
@@ -31,10 +26,4 @@ class App extends React.Component {
 //            currentUser: {...}
 // }
 
-const mapStateToProps = ({ currentUser }) => {
-  return {
-      currentUser
-  }
-}
-
-export default connect(mapStateToProps, { getCurrentUser })(App);
+export default App

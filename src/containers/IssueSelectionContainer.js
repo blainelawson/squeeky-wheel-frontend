@@ -15,7 +15,13 @@ export default class IssueSelectionContainer extends React.Component {
                     <div className="column"
                             style={{
                                 backgroundColor: '#29316A'
+                    }}>
+                        <h2 style={{
+                                textAlign: "center",
+                                color: "white"
                         }}>
+                            All Issues
+                        </h2>
                         <IssuesContainer 
                             style={{
                                 backgroundColor: '#29316A'
@@ -25,7 +31,13 @@ export default class IssueSelectionContainer extends React.Component {
                         className="column"
                         style={{
                             backgroundColor: '#29316A'
+                    }}>
+                        <h2 style={{
+                                textAlign: "center",
+                                color: "white"
                         }}>
+                            Your Issues
+                        </h2>                            
                         <CartContainer 
                             style={{
                                 backgroundColor: '#29316A'

@@ -13,7 +13,7 @@ const Welcome = () => {
                     top: "50%",
                     left: "40%",
             }}>
-                <h1>Welcome to Squeeky Wheel. You must log-in first.</h1>
+                <h1>Welcome to Squeeky Wheel. The year is 1996. You must log-in first.</h1>
             </div>
         </div>
     )

@@ -1,11 +1,14 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import { logout } from "../actions/currentUser"
+import '../App.css'
 
 const Logout = ({ logout }) => {
 
     return(
-        <button onClick={logout} >Log Out</button>
+        <li class="navbar">
+            <a href="#" onClick={logout}>Log Out</a>
+        </li>
     )
 }
 
