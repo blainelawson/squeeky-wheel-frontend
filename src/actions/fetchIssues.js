@@ -1,9 +1,7 @@
 export function fetchIssues(){
 
     return (dispatch) => {
-        console.log("fetching issues")
         fetch('http://localhost:3000/api/v1/issues',{
-            // credentials: "include",
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -19,9 +17,9 @@ export function fetchIssues(){
 
 // typically return {type: 'whatever', payload: }
 
-export function fetchUserIssues(){
+export function fetchUserIssues(currentUser){
     return (dispatch) => {
-        fetch('http://localhost:3000/api/v1/issues')
+        fetch(`http://localhost:3000/api/v1/users/${currentUser.id}/issues`)
         .then(res => res.json())
         .then(issues => dispatch({
             type: 'FETCH_USER_ISSUES',
