@@ -21,7 +21,7 @@ class CartContainer extends React.Component {
         return (
         <div className="ui link cards"
         style={{
-            backgroundColor: 'red'
+            backgroundColor: '#29316A'
         }}>
             {this.props.userIssues.map(issue => {
 

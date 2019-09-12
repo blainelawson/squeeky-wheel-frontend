@@ -22,7 +22,7 @@ class IssuesContainer extends React.Component {
         <div 
             className="ui link cards"
             style={{
-                backgroundColor: 'red'
+                backgroundColor: '#29316A'
             }}>
             {this.props.issues.map(issue => {
 

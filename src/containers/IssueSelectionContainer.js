@@ -6,25 +6,29 @@ export default class IssueSelectionContainer extends React.Component {
 
     render(){
         return (
-            <div className="ui segment">
-                <div className="ui two column very relaxed grid">
+            <div className="ui segment" style={{
+                backgroundColor: "#29316A"
+            }}>
+                <div className="ui two column very relaxed grid" style={{
+                    backgroundColor: "#29316A"
+                }}>
                     <div className="column"
                             style={{
-                                backgroundColor: 'red'
+                                backgroundColor: '#29316A'
                         }}>
                         <IssuesContainer 
                             style={{
-                                backgroundColor: 'red'
+                                backgroundColor: '#29316A'
                         }}/>
                     </div>
                     <div 
                         className="column"
                         style={{
-                            backgroundColor: 'red'
+                            backgroundColor: '#29316A'
                         }}>
                         <CartContainer 
                             style={{
-                                backgroundColor: 'red'
+                                backgroundColor: '#29316A'
                         }}/>
                     </div>
                 </div>

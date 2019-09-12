@@ -6,7 +6,10 @@ import Logout from "./Logout"
 
 const NavBar = ({ currentUser }) => {
     return (
-        <div>
+        <div style=
+        {{
+            backgroundColor: "#5AC205"
+        }}>
             {currentUser ? <Logout /> : <Login />}
         </div>
     )
