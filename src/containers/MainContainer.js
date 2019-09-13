@@ -3,7 +3,6 @@ import IssuesSelectionContainer from './IssueSelectionContainer'
 import '../App.css';
 import {connect} from 'react-redux'
 import { getCurrentUser } from '../actions/currentUser'
-import NavBar from '../components/NavBar'
 import Welcome from '../components/Welcome'
 
 class App extends React.Component {
@@ -17,8 +16,13 @@ class App extends React.Component {
       <div style={{
         backgroundColor: "#B6CCE1"
     }}>
-        <NavBar />
+      <div style={{
+        position: "relative",
+        top: "27px"
+      }}>
+
         {this.props.currentUser ? <IssuesSelectionContainer /> : <Welcome />}
+        </div>
       </div>
     );
   }

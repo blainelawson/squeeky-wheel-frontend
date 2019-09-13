@@ -21,11 +21,14 @@ const Login = ({ loginFormData, updateLoginForm, login }) => {
     }
 
     return(
+        <li className="login">
+
         <form onSubmit={handleSubmit}>
             <input type="text" name="username" value={loginFormData.username} onChange={handleInputChange} placeholder="username" />
             <input type="text" name="password" value={loginFormData.password} onChange={handleInputChange} placeholder="password" />
             <input type="submit" value="Log In" />
         </form>
+        </li>
     )
 }
 

@@ -21,10 +21,8 @@ export default class IssueCard extends React.Component {
                         </Card.Description>
                     </Card.Content>
                     <Card.Content extra>
-                        <a>
                             <Icon name="user" />
                             542 Users following this issue
-                        </a>
                     </Card.Content>
                 </Card>
         )

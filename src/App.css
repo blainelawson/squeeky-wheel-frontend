@@ -41,6 +41,18 @@ li.navbar a {
     text-decoration: none;
 }
 
+li.login a{
+    display: block;
+    color: #413029;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li.login a:hover {
+    background-color: beige;
+}
+
 li.navbar a:hover {
     background-color: beige;
 }

@@ -6,8 +6,8 @@ import '../App.css'
 const Logout = ({ logout }) => {
 
     return(
-        <li class="navbar">
-            <a href="#" onClick={logout}>Log Out</a>
+        <li className="login">
+            <a href="/logout" onClick={logout}>Log Out</a>
         </li>
     )
 }

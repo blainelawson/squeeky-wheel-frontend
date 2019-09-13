@@ -9,6 +9,7 @@ export default function issueReducer(state = initialState, action) {
             return {...state, issues: action.payload} 
         case 'FETCH_USER_ISSUES':
             return {...state, userIssues: action.payload}
+        default:
+            return state
     }
-    return state
 }

@@ -4,27 +4,34 @@ import { connect } from 'react-redux'
 import Login from "./Login"
 import Logout from "./Logout"
 
+import { getCurrentUser } from '../actions/currentUser'
+
 import "../App.css"
 
-const NavBar = ({ currentUser }) => {
-    return (
-        <div>
-            <ul class="navbar">
-                <li class="navbar">
-                    <a href="/#">Home</a>
-                </li>
-                <li class="navbar">
-                    <a href="/#">About</a>
-                </li>
-                <li class="navbar">
-                    <a href="/#">Contact</a>
-                </li>
-                <li class="login">
-                    {currentUser ? <Logout /> : <Login />}
-                </li>
-            </ul>
-        </div>
-    )
+class NavBar extends React.Component {
+    componentDidMount(){
+        this.props.getCurrentUser()
+    }
+
+    render(){
+        return (
+            <div>
+                <ul className="navbar">
+                    <li className="navbar">
+                        <a href="/">Home</a>
+                    </li>
+                    <li className="navbar">
+                        <a href="/about">About</a>
+                    </li>
+                    <li className="navbar">
+                        <a href="/contact">Contact</a>
+                    </li>
+                        {this.props.currentUser ? <Logout /> : <Login />}
+
+                </ul>
+            </div>
+        )
+    }
 }
 
 const mapStateToProps = ({ currentUser }) => {
@@ -33,4 +40,4 @@ const mapStateToProps = ({ currentUser }) => {
     }
 }
 
-export default connect(mapStateToProps, null)(NavBar)
+export default connect(mapStateToProps, {getCurrentUser})(NavBar)

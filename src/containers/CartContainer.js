@@ -1,7 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {fetchUserIssues} from '../actions/fetchIssues'
-import Issues from '../components/Issues'
 import IssueCard from '../components/IssueCard'
 
 // import IssueInput from './components/IssueInput'
@@ -25,7 +24,7 @@ class CartContainer extends React.Component {
         }}>
             {this.props.userIssues.map(issue => {
 
-                return <div className="card"><IssueCard name={issue.name} desc={issue.desc} date={issue.date} /></div>
+                return <div className="card" key={issue.id}><IssueCard name={issue.name} desc={issue.desc} date={issue.date} /></div>
             })}
         </div>
         )

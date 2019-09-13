@@ -1,8 +1,12 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
+
 import './App.css';
-import {connect} from 'react-redux'
-import { getCurrentUser } from './actions/currentUser'
+
 import NavBar from './components/NavBar'
+// import { about } from './components/About'
+
 import MainContainer from './containers/MainContainer';
 
 class App extends React.Component {
@@ -12,7 +16,8 @@ class App extends React.Component {
       <div style={{
         backgroundColor: "#B6CCE1"
     }}>
-        <NavBar />
+        
+        {/* <NavBar /> */}
         <MainContainer />
       </div>
     );

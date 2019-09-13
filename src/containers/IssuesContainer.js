@@ -26,7 +26,7 @@ class IssuesContainer extends React.Component {
             }}>
                 {this.props.issues.map(issue => {
 
-                    return <div className="card"><IssueCard name={issue.name} desc={issue.desc} date={issue.date} /></div>
+                    return <div className="card" key={issue.id}><IssueCard name={issue.name} desc={issue.desc} date={issue.date} /></div>
                 })}
         </div>
         )

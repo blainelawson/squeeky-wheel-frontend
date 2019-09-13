@@ -6,6 +6,10 @@ export default class IssueSelectionContainer extends React.Component {
 
     render(){
         return (
+            <div style={{
+                position: "relative",
+                top: "27px"
+            }}>
             <div className="ui segment" style={{
                 backgroundColor: "#29316A"
             }}>
@@ -47,6 +51,7 @@ export default class IssueSelectionContainer extends React.Component {
                 <div className="ui vertical divider">
                     -->
                 </div>
+            </div>
             </div>
         )
     }

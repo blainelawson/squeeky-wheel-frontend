@@ -7,7 +7,16 @@ import issueReducer from './reducers/issueReducer'
 import usersReducer from './reducers/users'
 import currentUser from './reducers/currentUser'
 import loginForm from './reducers/loginForm'
-import App from './App';
+
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+
+import './App.css';
+
+import NavBar from './components/NavBar'
+import  About from './components/About'
+import Contact from './components/Contact'
+import MainContainer from './containers/MainContainer';
+
 
 const reducer = combineReducers({
     users: usersReducer,
@@ -22,7 +31,14 @@ let store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)))
 
 ReactDOM.render(
     <Provider store={store}>
-        <App />    
+        <Router>
+            <React.Fragment>
+                <NavBar />
+                <Route exact path="/" component={MainContainer} />
+                <Route exact path="/about" component={About} state={store} />
+                <Route exact path="/contact" component={Contact} />
+            </React.Fragment>
+        </Router>
     </Provider>,
  document.getElementById('root'));
 
