@@ -1,7 +1,9 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {fetchIssues} from '../actions/fetchIssues'
+import { addUserIssues } from '../actions/cartActions'
 import IssueCard from '../components/IssueCard'
+
 // import Draggable from './DraggableContainer'
 
 // import IssueInput from './components/IssueInput'
@@ -19,6 +21,7 @@ class IssuesContainer extends React.Component {
 
     clickHandler = (event) => {
         debugger
+        this.props.addUserIssues(event.currentTarget.id)
     }
     
     render() {
@@ -43,4 +46,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, {fetchIssues})(IssuesContainer)
+export default connect(mapStateToProps, {fetchIssues, addUserIssues})(IssuesContainer)
