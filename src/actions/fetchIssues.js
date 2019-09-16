@@ -9,7 +9,7 @@ export function fetchIssues(){
         })
         .then(res => res.json())
         .then(issues => dispatch({
-            type: 'FETCH_ISSUES',    
+            type: 'SET_ISSUES',    
             payload: issues
         }))
     }
@@ -22,7 +22,7 @@ export function fetchUserIssues(currentUser){
         fetch(`http://localhost:3000/api/v1/users/${currentUser.id}/issues`)
         .then(res => res.json())
         .then(issues => dispatch({
-            type: 'FETCH_USER_ISSUES',
+            type: 'SET_USER_ISSUES',
             payload: issues
         }))
     }

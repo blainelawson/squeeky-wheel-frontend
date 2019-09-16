@@ -15,7 +15,8 @@ import './App.css';
 import NavBar from './components/NavBar'
 import  About from './components/About'
 import Contact from './components/Contact'
-import MainContainer from './containers/MainContainer';
+import MainContainer from './containers/MainContainer'
+import Signup from './components/Signup'
 
 
 const reducer = combineReducers({
@@ -37,6 +38,7 @@ ReactDOM.render(
                 <Route exact path="/" component={MainContainer} />
                 <Route exact path="/about" component={About} state={store} />
                 <Route exact path="/contact" component={Contact} />
+                {/* <Route exact path="signup" component={Signup} /> */}
             </React.Fragment>
         </Router>
     </Provider>,

@@ -16,6 +16,7 @@ class IssuesContainer extends React.Component {
     }
 
     componentDidMount(){
+        debugger
         this.props.fetchIssues()
     }
 
