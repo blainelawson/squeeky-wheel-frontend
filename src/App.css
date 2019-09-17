@@ -41,7 +41,11 @@ li.navbar a {
     text-decoration: none;
 }
 
-li.login a{
+li.logout {
+    float: right;
+}
+
+li.logout a{
     display: block;
     color: #413029;
     text-align: center;
@@ -49,7 +53,7 @@ li.login a{
     text-decoration: none;
 }
 
-li.login a:hover {
+li.logout a:hover {
     background-color: beige;
 }
 
