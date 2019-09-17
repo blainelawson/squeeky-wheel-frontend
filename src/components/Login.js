@@ -2,8 +2,6 @@ import React from 'react'
 import {connect} from 'react-redux'
 import { updateLoginForm } from '../actions/loginForm'
 import { login } from "../actions/currentUser"
-import { BrowserRouter as Router, Route } from 'react-router-dom'
-import Signup from './Signup'
 
 const Login = ({ loginFormData, updateLoginForm, login }) => {
     const handleInputChange = event => {
