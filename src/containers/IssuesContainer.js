@@ -16,13 +16,12 @@ class IssuesContainer extends React.Component {
     }
 
     componentDidMount(){
-        debugger
         this.props.fetchIssues()
     }
 
     clickHandler = (event) => {
-        debugger
-        this.props.addUserIssues(event.currentTarget.id)
+        // debugger
+        this.props.addUserIssues({issueId: event.currentTarget.id})
     }
     
     render() {
