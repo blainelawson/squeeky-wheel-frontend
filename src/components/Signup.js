@@ -3,9 +3,9 @@
 // import {updateSignupForm} from "../actions/updateSignupForm"
 // import {signup} from "../actions/currentUser"
 
-// export default class Signup extends React.Component {
+// const Signup = ({ signupFormData, updateSignupForm, signup }) => {
 
-//     handleInputChange = event => {
+//     const handleInputChange = event => {
 //         const {name, value} = event.target
 //         const updatedFormInfo = {
 //             ...signupFormData,
@@ -15,24 +15,33 @@
 //         updateSignupForm(updatedFormInfo)
 //     }
 
-//     handleSubmit = event => {
+//     const handleSubmit = event => {
 //         event.preventDefault()
 //         signup(signupFormData)
 //     }
 
 
-//     render(){
 //         return(
 //             <div style={{
 //                 position: "relative",
-//                 top: "50px",
-//                 backgroundColor: "red"
-                
+//                 top: "50px"              
 //             }}>
-//                 <h1>SignupComponent</h1>
+//                 <form onSubmit={this.handleSubmit}>
+//                     Name: <input type="text" value={signupFormData.name} onChange={handleInputChange} name="name" placeholder="First and Last Name" />
+//                     Username: <input type="text" value={signupFormData.username} onChange={handleInputChange} name="username" placeholder="username" />
+//                     Zipcode: <input type="text" value={signupFormData.zipcode} onChange={handleInputChange} placeholder="e.g. 63701" />
+//                     Password: <input type="password" value={signupFormData.password} onChange={handleInputChange} name="password" />
+//                     <input type="submit" value="Create User" />
+//                 </form>
 //             </div>
 //         )
+// }
+    
+// const mapStateToProps = state => {
+//     return {
+//         signupFormData: state.signupForm
 //     }
 // }
 
-// export default connect()(Signup)
+
+// export default connect(mapStateToProps, {updateSignupForm, signup})(Signup)
