@@ -7,6 +7,7 @@ import issueReducer from './reducers/issueReducer'
 import usersReducer from './reducers/users'
 import currentUser from './reducers/currentUser'
 import loginForm from './reducers/loginForm'
+import signupForm  from './reducers/signupFormReducer'
 
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
@@ -23,7 +24,8 @@ const reducer = combineReducers({
     users: usersReducer,
     currentUser,
     issueReducer,
-    loginForm
+    loginForm,
+    signupForm
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
