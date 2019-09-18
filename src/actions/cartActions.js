@@ -1,16 +1,11 @@
 // synchronous actions
 
-// export function addIssue(issue) {
-
-// }
-
-
-
-
-
-
-
-
+export function addIssue(issue) {
+    return {
+        type: 'ADD_USER_ISSUE',
+        payload: issue
+    }
+}
 
 
 // async ations
@@ -27,6 +22,13 @@ export const  addUserIssues = (issueId) => {
             },
             body: JSON.stringify(issueId)
         })
-        .then(r => console.log(r.json))
+        .then(r => r.json())
+        .then(issue => {
+            if (issue.error) {
+                alert(issue.error)
+            }else{
+                dispatch(addIssue(issue))
+            }
+        })
     }
 }

@@ -9,8 +9,9 @@ export default function issueReducer(state = initialState, action) {
             return {...state, issues: action.payload} 
         case 'SET_USER_ISSUES':
             return {...state, userIssues: action.payload}
-        case 'ADD_USER_ISSUES':
-            return {...state, userIssues: action.payload}
+        case 'ADD_USER_ISSUE':
+            const newUserIssues = state.userIssues.concat(action.payload)
+            return {...state, userIssues: newUserIssues}
         default:
             return state
     }
