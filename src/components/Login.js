@@ -2,37 +2,45 @@ import React from 'react'
 import {connect} from 'react-redux'
 import { updateLoginForm } from '../actions/loginForm'
 import { login } from "../actions/currentUser"
+import { Redirect } from 'react-router-dom'
 
-const Login = ({ loginFormData, updateLoginForm, login }) => {
-    const handleInputChange = event => {
+// ({ loginFormData, updateLoginForm, login }) 
+
+class Login extends React.Component {
+
+    constructor(){
+        super()
+    }
+    handleInputChange = event => {
         const {name, value} = event.target
         const updatedFormInfo = {
-            ...loginFormData,
+            ...this.props.loginFormData,
             [name]: value
         }
-
-        updateLoginForm(updatedFormInfo)
+        this.props.updateLoginForm(updatedFormInfo)
     }
 
-    const handleSubmit = event => {
+    handleSubmit = event => {
         event.preventDefault()
         
-        login(loginFormData)
+        this.props.login(this.props.loginFormData)
+        // return <Redirect to='/' />
     }
 
-    return(
-        <li className="login">
-            <form onSubmit={handleSubmit}>
-                <input type="text" name="username" value={loginFormData.username} onChange={handleInputChange} placeholder="username" />
-                <input type="text" name="password" value={loginFormData.password} onChange={handleInputChange} placeholder="password" />
-                <input type="submit" value="Log In" />
-            </form>
+    render(){
+        return (
             <li className="login">
-                <a href="/signup">Or Sign-up</a>
+                <form onSubmit={this.handleSubmit}>
+                    <input type="text" name="username" value={this.props.loginFormData.username} onChange={event => this.handleInputChange(event)} placeholder="username" />
+                    <input type="text" name="password" value={this.props.loginFormData.password} onChange={event => this.handleInputChange(event)} placeholder="password" />
+                    <input type="submit" value="Log In" />
+                </form>
+                <li className="login">
+                    <a href="/signup">Or Sign-up</a>
+                </li>
             </li>
-        </li>
-
-    )
+        )
+    }   
 }
 
 const mapStateToProps = state => {
