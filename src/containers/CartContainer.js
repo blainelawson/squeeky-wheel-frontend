@@ -2,8 +2,8 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {fetchUserIssues} from '../actions/fetchIssues'
 import IssueCard from '../components/IssueCard'
+import { deleteUserIssues } from '../actions/cartActions'
 
-// import IssueInput from './components/IssueInput'
 const issuesPerPage = 6
 
 class CartContainer extends React.Component {
@@ -15,6 +15,10 @@ class CartContainer extends React.Component {
     componentDidMount(){
         this.props.fetchUserIssues(this.props.currentUser)
     }
+
+    clickHandler = (event) => {
+        this.props.deleteUserIssues({issueId: event.currentTarget.id})
+    }
     
     render() {
         return (
@@ -24,7 +28,7 @@ class CartContainer extends React.Component {
         }}>
             {this.props.userIssues.map(issue => {
 
-                return <div className="card" key={issue.id}><IssueCard name={issue.name} desc={issue.desc} date={issue.date} /></div>
+                return <div className="card" id={issue.id} key={issue.id} onClick={this.clickHandler}><IssueCard name={issue.name} desc={issue.desc} date={issue.date} /></div>
             })}
         </div>
         )
@@ -38,4 +42,4 @@ const mapStateToProps = ( state ) => {
     }
 }
 
-export default connect(mapStateToProps, {fetchUserIssues})(CartContainer)
+export default connect(mapStateToProps, {fetchUserIssues, deleteUserIssues})(CartContainer)

@@ -1,6 +1,5 @@
 import { resetLoginForm } from './loginForm'
 
-
 // SYNCHRONOUS ACTION CREATORS
 export const setCurrentUser = user => {
     return {
@@ -17,7 +16,7 @@ export const clearCurrentUser = () => {
 }
 
 // ASCYNCHRONOUS ACTION CREATORS
-export const login = loginCredentials => {
+export const login = (loginCredentials, history) => {
     return (dispatch) =>  {
         return fetch("http://localhost:3000/login", {
             credentials: "include",
@@ -35,6 +34,7 @@ export const login = loginCredentials => {
             }else{
                 dispatch(setCurrentUser(user))
                 dispatch(resetLoginForm())
+                history.push('/')
             }
         })
         .catch(console.log)
