@@ -2,15 +2,9 @@ import React from 'react'
 import {connect} from 'react-redux'
 import { updateLoginForm } from '../actions/loginForm'
 import { login } from "../actions/currentUser"
-import { Redirect } from 'react-router-dom'
 
-// ({ loginFormData, updateLoginForm, login }) 
 
 class Login extends React.Component {
-
-    constructor(){
-        super()
-    }
     handleInputChange = event => {
         const {name, value} = event.target
         const updatedFormInfo = {
@@ -24,7 +18,6 @@ class Login extends React.Component {
         event.preventDefault()
         
         this.props.login(this.props.loginFormData)
-        // return <Redirect to='/' />
     }
 
     render(){
@@ -45,7 +38,7 @@ class Login extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        loginFormData: state.loginForm
+        loginFormData: state.loginForm,
     }
 }
 
