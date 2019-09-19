@@ -17,7 +17,7 @@ class CartContainer extends React.Component {
     }
 
     clickHandler = (event) => {
-        this.props.deleteUserIssues({issueId: event.currentTarget.id})
+        this.props.deleteUserIssues({issueId: event.currentTarget.id}, this.props.currentUser)
     }
     
     render() {

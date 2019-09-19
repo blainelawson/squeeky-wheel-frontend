@@ -16,10 +16,10 @@ export function deleteIssue(issue){
 
 // async ations
 
-export const  addUserIssues = (issueId) => {
+export const  addUserIssues = (issueId, currentUser) => {
     return (dispatch) => {
 
-        return fetch('http://localhost:3000/add_user_issue', {
+        return fetch(`http://localhost:3000/api/v1/users/${currentUser.id}/add_user_issue`, {
             credentials: "include",
             method: "PATCH",
             headers: {
@@ -39,10 +39,10 @@ export const  addUserIssues = (issueId) => {
     }
 }
 
-export const deleteUserIssues = (issueId) => {
+export const deleteUserIssues = (issueId, currentUser) => {
     return (dispatch) => {
 
-        return fetch('http://localhost:3000/delete_user_issue', {
+        return fetch(`http://localhost:3000/api/v1/users/${currentUser.id}/delete_user_issue`, {
             credentials: "include",
             method: "PATCH",
             headers: {

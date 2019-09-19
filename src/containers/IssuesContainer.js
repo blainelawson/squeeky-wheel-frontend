@@ -21,7 +21,7 @@ class IssuesContainer extends React.Component {
 
     clickHandler = (event) => {
         // debugger
-        this.props.addUserIssues({issueId: event.currentTarget.id})
+        this.props.addUserIssues({issueId: event.currentTarget.id}, this.props.currentUser)
     }
     
     render() {
@@ -42,7 +42,8 @@ class IssuesContainer extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        issues: state.issueReducer.issues
+        issues: state.issueReducer.issues,
+        currentUser: state.currentUser
     }
 }
 
