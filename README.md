@@ -10,4 +10,4 @@ Using user address data, Squeeky Wheel will prioritize news closer to one's home
 
 // FRONT END //
 
-This is the client-side portion of the website which utilizes React with Redux. It connects with the backend at http://www.github.com/blainelawson/squeeky-wheel-backent which utilizes Ruby on Rails.
+This is the client-side portion of the website which utilizes React with Redux. It connects with the backend at http://www.github.com/blainelawson/squeeky-wheel-backend which utilizes Ruby on Rails.
