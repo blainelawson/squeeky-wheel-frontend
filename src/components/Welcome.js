@@ -11,7 +11,7 @@ const Welcome = () => {
             <div style={{    
                     position: "absolute",
                     top: "50%",
-                    left: "40%",
+                    left: "30%",
             }}>
                 <h1>Welcome to Squeeky Wheel. The year is 1996. You must log-in first.</h1>
                 blainelawson
