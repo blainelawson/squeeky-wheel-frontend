@@ -20,7 +20,6 @@ class IssuesContainer extends React.Component {
     }
 
     clickHandler = (event) => {
-        // debugger
         this.props.addUserIssues({issueId: event.currentTarget.id}, this.props.currentUser)
     }
     

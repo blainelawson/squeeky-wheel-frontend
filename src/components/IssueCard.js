@@ -2,7 +2,6 @@ import React from 'react'
 import faker from 'faker'
 import {Card, Image, Icon} from 'semantic-ui-react'
 
-
 export default class IssueCard extends React.Component {
 
     render() {
