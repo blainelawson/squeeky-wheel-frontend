@@ -1,68 +1,13 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**IN PRODUCTION**
 
-## Available Scripts
+Current Walkthrough: https://www.loom.com/share/fddd82cf688e47c88edad8303190d796
 
-In the project directory, you can run:
+"'The squeaky wheel gets the grease' is an American proverb used to convey the idea that the most noticeable problems are the ones most likely to get attention." - Wikipedia
 
-### `npm start`
+Squeeky Wheel intends to create a community around the issues people face, both of a broad appeal, such as climate change, and more local, like finding affordable housing or having access to public transportation. Often, the people who make the most noise, make the most calls to their legislative offices, send the most e-mails--those of issues about which we are the loudest--are the ones that get the attention. Thus, squeeky wheel seeks to unite people by their concerns, connect them with summary information involving their concerns from the news, and prompt them to take action.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Using user address data, Squeeky Wheel will prioritize news closer to one's home as well as connecting to government API feeds to assess details like voting precint and district info so users can quickly tap a button to be patched directly to their senators, House reps, etc.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+// FRONT END //
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This is the client-side portion of the website which utilizes React with Redux. It connects with the backend at http://www.github.com/blainelawson/squeeky-wheel-backend which utilizes Ruby on Rails.
