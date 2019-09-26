@@ -30,7 +30,8 @@ li.navbar {
 }
 
 li.login {
-    float: right
+    float: right;
+    padding: 6px 16px;
 }
 
 li.navbar a {

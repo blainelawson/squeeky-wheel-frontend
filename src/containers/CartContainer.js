@@ -28,7 +28,7 @@ class CartContainer extends React.Component {
         }}>
             {this.props.userIssues.map(issue => {
 
-                return <div className="card" id={issue.id} key={issue.id} ><IssueCard name={issue.name} desc={issue.desc} date={issue.date} /></div>
+                return <div className="card" id={issue.id} key={issue.id} onClick={this.clickHandler}><IssueCard name={issue.name} desc={issue.desc} date={issue.date} /></div>
             })}
         </div>
         )
