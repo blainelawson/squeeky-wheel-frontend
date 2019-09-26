@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import { updateLoginForm } from '../actions/loginForm'
 import { login } from "../actions/currentUser"
 import { withRouter } from 'react-router'
+import { Input, Button } from 'semantic-ui-react'
 
 class Login extends React.Component {
     handleInputChange = event => {
@@ -24,13 +25,10 @@ class Login extends React.Component {
         return (
             <li className="login">
                 <form onSubmit={this.handleSubmit}>
-                    <input type="text" name="username" value={this.props.loginFormData.username} onChange={event => this.handleInputChange(event)} placeholder="username" />
-                    <input type="text" name="password" value={this.props.loginFormData.password} onChange={event => this.handleInputChange(event)} placeholder="password" />
-                    <input type="submit" value="Log In" />
+                    <Input type="text" name="username" value={this.props.loginFormData.username} onChange={event => this.handleInputChange(event)} placeholder="username" />
+                    <Input type="text" name="password" value={this.props.loginFormData.password} onChange={event => this.handleInputChange(event)} placeholder="password" />
+                    <Button onClick={this.handleSubmit} primary>Log In</Button> or <Button secondary>Sign Up</Button>
                 </form>
-                <li className="login">
-                    <a href="/signup">Or Sign-up</a>
-                </li>
             </li>
         )
     }   
