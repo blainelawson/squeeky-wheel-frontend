@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {fetchIssues} from '../actions/fetchIssues'
+import {fetchNotUserIssues} from '../actions/fetchIssues'
 import { addUserIssues } from '../actions/cartActions'
 import IssueCard from '../components/IssueCard'
 
@@ -16,7 +16,7 @@ class IssuesContainer extends React.Component {
     }
 
     componentDidMount(){
-        this.props.fetchIssues()
+        this.props.fetchNotUserIssues(this.props.currentUser)
     }
 
     clickHandler = (event) => {
@@ -46,4 +46,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, {fetchIssues, addUserIssues})(IssuesContainer)
+export default connect(mapStateToProps, {fetchNotUserIssues, addUserIssues})(IssuesContainer)

@@ -1,13 +1,27 @@
 // synchronous actions
 
-export function addIssue(issue) {
+export function addSelectionIssue(issue) {
+    return {
+        type: 'ADD_SELECTION_ISSUE',
+        payload: issue
+    }
+}
+
+export function deleteSelectionIssue(issue){
+    return {
+        type: 'DELETE_SELECTION_ISSUE',
+        payload: issue
+    }
+}
+
+export function addUserIssue(issue) {
     return {
         type: 'ADD_USER_ISSUE',
         payload: issue
     }
 }
 
-export function deleteIssue(issue){
+export function deleteUserIssue(issue){
     return {
         type: 'DELETE_USER_ISSUE',
         payload: issue
@@ -33,7 +47,8 @@ export const  addUserIssues = (issueId, currentUser) => {
             if (issue.error) {
                 alert(issue.error)
             }else{
-                dispatch(addIssue(issue))
+                dispatch(addUserIssue(issue))
+                dispatch(deleteSelectionIssue(issue))
             }
         })
     }
@@ -56,7 +71,8 @@ export const deleteUserIssues = (issueId, currentUser) => {
             if (issue.error) {
                 alert(issue.error)
             }else{
-                dispatch(deleteIssue(issue))
+                dispatch(deleteUserIssue(issue))
+                dispatch(addSelectionIssue(issue))
             }
         })
     }

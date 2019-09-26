@@ -6,6 +6,7 @@ const initialState = {
 
 export default function issueReducer(state = initialState, action) {
     let newUserIssues = []
+    let newSelectionIssues = []
 
     switch (action.type) {
         case 'SET_ISSUES':
@@ -18,6 +19,13 @@ export default function issueReducer(state = initialState, action) {
         case 'DELETE_USER_ISSUE':
             newUserIssues = state.userIssues.filter(stateIssue => stateIssue.id !== action.payload.id)
             return {...state, userIssues: newUserIssues}
+        case 'ADD_SELECTION_ISSUE':
+            newSelectionIssues = state.issues.concat(action.payload)
+            return {...state, issues: newSelectionIssues}
+        case 'DELETE_SELECTION_ISSUE':
+            // debugger
+            newSelectionIssues = state.issues.filter(stateIssue => stateIssue.id !== action.payload.id)
+            return {...state, issues: newSelectionIssues}
         default:
             return state
     }

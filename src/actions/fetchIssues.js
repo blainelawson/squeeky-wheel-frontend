@@ -42,3 +42,12 @@ export function fetchUserIssues(currentUser){
         .then(issues => dispatch(setUserIssues(issues)))
     }
 }
+
+export function fetchNotUserIssues(currentUser){
+    return (dispatch) => {
+        fetch(`http://localhost:3000/api/v1/users/${currentUser.id}/not_user_issues`,
+        {credentials: "include"})
+        .then(res => res.json())
+        .then(issues => dispatch(setIssues(issues)))
+    }
+}
