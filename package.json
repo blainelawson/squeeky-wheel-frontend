@@ -16,7 +16,7 @@
     "semantic-ui-react": "^0.88.0"
   },
   "scripts": {
-    "start": "node App.js"
+    "start": "node ./src/App.js"
   },
   "eslintConfig": {
     "extends": "react-app"
