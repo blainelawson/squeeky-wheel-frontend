@@ -18,7 +18,7 @@ export const clearCurrentUser = () => {
 // ASCYNCHRONOUS ACTION CREATORS
 export const login = (loginCredentials, history) => {
     return (dispatch) =>  {
-        return fetch("https://squeeky-wheel-api/login", {
+        return fetch("https://squeeky-wheel-api.herokuapp.com/login", {
             credentials: "include",
             method: "POST",
             headers: {
@@ -44,7 +44,7 @@ export const login = (loginCredentials, history) => {
 
 export const getCurrentUser = () => {
     return (dispatch) =>  {
-        return fetch("https://squeeky-wheel-api/get_current_user", {
+        return fetch("https://squeeky-wheel-api.herokuapp.com/get_current_user", {
             credentials: "include",
             method: "GET",
             headers: {
@@ -67,7 +67,7 @@ export const getCurrentUser = () => {
 export const logout = () => {
     return dispatch => {
         dispatch(clearCurrentUser());
-        return fetch("https://squeeky-wheel-api/logout", {
+        return fetch("https://squeeky-wheel-api.herokuapp.com/logout", {
             credentials: "include",
             method: "DELETE",
             headers: {
