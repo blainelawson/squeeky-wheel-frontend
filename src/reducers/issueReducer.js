@@ -23,7 +23,6 @@ export default function issueReducer(state = initialState, action) {
             newSelectionIssues = state.issues.concat(action.payload)
             return {...state, issues: newSelectionIssues}
         case 'DELETE_SELECTION_ISSUE':
-            // debugger
             newSelectionIssues = state.issues.filter(stateIssue => stateIssue.id !== action.payload.id)
             return {...state, issues: newSelectionIssues}
         default:

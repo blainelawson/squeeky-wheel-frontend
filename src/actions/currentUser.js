@@ -18,7 +18,7 @@ export const clearCurrentUser = () => {
 // ASCYNCHRONOUS ACTION CREATORS
 export const login = (loginCredentials, history) => {
     return (dispatch) =>  {
-        return fetch("http://localhost:3000/login", {
+        return fetch("https://squeeky-wheel-api/login", {
             credentials: "include",
             method: "POST",
             headers: {
@@ -44,7 +44,7 @@ export const login = (loginCredentials, history) => {
 
 export const getCurrentUser = () => {
     return (dispatch) =>  {
-        return fetch("http://localhost:3000/get_current_user", {
+        return fetch("https://squeeky-wheel-api/get_current_user", {
             credentials: "include",
             method: "GET",
             headers: {
@@ -67,7 +67,7 @@ export const getCurrentUser = () => {
 export const logout = () => {
     return dispatch => {
         dispatch(clearCurrentUser());
-        return fetch("http://localhost:3000/logout", {
+        return fetch("https://squeeky-wheel-api/logout", {
             credentials: "include",
             method: "DELETE",
             headers: {

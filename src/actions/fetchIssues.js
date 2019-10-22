@@ -20,7 +20,7 @@ export function setUserIssues(issues) {
 export function fetchIssues(){
 
     return (dispatch) => {
-        fetch('http://localhost:3000/api/v1/issues',{
+        fetch('https://squeeky-wheel-api/api/v1/issues',{
             credentials: "include",
             method: "GET",
             headers: {
@@ -36,7 +36,7 @@ export function fetchIssues(){
 
 export function fetchUserIssues(currentUser){
     return (dispatch) => {
-        fetch(`http://localhost:3000/api/v1/users/${currentUser.id}/issues`,
+        fetch(`https://squeeky-wheel-api/api/v1/users/${currentUser.id}/issues`,
         {credentials: "include"})
         .then(res => res.json())
         .then(issues => dispatch(setUserIssues(issues)))
@@ -45,7 +45,7 @@ export function fetchUserIssues(currentUser){
 
 export function fetchNotUserIssues(currentUser){
     return (dispatch) => {
-        fetch(`http://localhost:3000/api/v1/users/${currentUser.id}/not_user_issues`,
+        fetch(`https://squeeky-wheel-api/api/v1/users/${currentUser.id}/not_user_issues`,
         {credentials: "include"})
         .then(res => res.json())
         .then(issues => dispatch(setIssues(issues)))

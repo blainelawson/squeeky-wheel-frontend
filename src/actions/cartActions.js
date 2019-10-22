@@ -33,7 +33,7 @@ export function deleteUserIssue(issue){
 export const  addUserIssues = (issueId, currentUser) => {
     return (dispatch) => {
 
-        return fetch(`http://localhost:3000/api/v1/users/${currentUser.id}/add_user_issue`, {
+        return fetch(`https://squeeky-wheel-api/api/v1/users/${currentUser.id}/add_user_issue`, {
             credentials: "include",
             method: "PATCH",
             headers: {
@@ -57,7 +57,7 @@ export const  addUserIssues = (issueId, currentUser) => {
 export const deleteUserIssues = (issueId, currentUser) => {
     return (dispatch) => {
 
-        return fetch(`http://localhost:3000/api/v1/users/${currentUser.id}/delete_user_issue`, {
+        return fetch(`https://squeeky-wheel-api/api/v1/users/${currentUser.id}/delete_user_issue`, {
             credentials: "include",
             method: "PATCH",
             headers: {
