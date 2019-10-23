@@ -37,9 +37,9 @@ ReactDOM.render(
         <Router>
             <React.Fragment>
                 <NavBar />
-                <Route path="/" component={MainContainer} />
-                <Route path="/about" component={About} state={store} />
-                <Route path="/contact" component={Contact} />
+                <Route exact path="/" component={MainContainer} />
+                <Route exact path="/about" component={About} state={store} />
+                <Route exact path="/contact" component={Contact} />
                 {/* <Route exact path="/signup" component={Signup} /> */}
             </React.Fragment>
         </Router>
