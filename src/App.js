@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
 
-import './App.css';
+// import './App.css';
 
 import NavBar from './components/NavBar'
 // import { about } from './components/About'

@@ -1,6 +1,6 @@
 import React from 'react';
 import IssuesSelectionContainer from './IssueSelectionContainer'
-import '../App.css';
+// import '../App.css';
 import {connect} from 'react-redux'
 import { getCurrentUser } from '../actions/currentUser'
 import Welcome from '../components/Welcome'

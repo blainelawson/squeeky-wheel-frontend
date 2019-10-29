@@ -27,7 +27,7 @@ class Login extends React.Component {
                 <form onSubmit={this.handleSubmit}>
                     <Input type="text" name="username" value={this.props.loginFormData.username} onChange={event => this.handleInputChange(event)} placeholder="username" />
                     <Input type="text" name="password" value={this.props.loginFormData.password} onChange={event => this.handleInputChange(event)} placeholder="password" />
-                    <Button onClick={this.handleSubmit} primary>Log In</Button> or <Button secondary>Sign Up</Button>
+                    <Button onClick={this.handleSubmit} primary>Log In</Button> <Button secondary>Sign Up</Button>
                 </form>
             </li>
         )

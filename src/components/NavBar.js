@@ -6,7 +6,8 @@ import Logout from "./Logout"
 
 import { getCurrentUser } from '../actions/currentUser'
 
-import "../App.css"
+// import "../App.css"
+// import "../assets/css/bootstrap.min.css"
 
 class NavBar extends React.Component {
     componentDidMount(){
@@ -15,8 +16,8 @@ class NavBar extends React.Component {
 
     render(){
         return (
-            <div>
-                <ul className="navbar">
+            <div className="jss529" id="navbar">
+                <ul className="MuiPaper-root MuiPaper-elevation4 MuiAppBar-root MuiAppBar-positionFixed jss9 jss22 MuiAppBar-colorPrimary mui-fixed">
                     <li className="navbar">
                         <a href="/">Home</a>
                     </li>

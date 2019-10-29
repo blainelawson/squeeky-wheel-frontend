@@ -1,3 +1,9 @@
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import $ from 'jquery';
+// import Popper from 'popper.js';
+// import 'bootstrap/dist/js/bootstrap.bundle.min';
+import "./assets/css/material-kit-react.css.map"
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {createStore, applyMiddleware, compose, combineReducers} from 'redux'
@@ -11,13 +17,13 @@ import signupForm  from './reducers/signupFormReducer'
 
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-import './App.css';
+// import './App.css';
 
 import NavBar from './components/NavBar'
 import  About from './components/About'
 import Contact from './components/Contact'
 import MainContainer from './containers/MainContainer'
-import Signup from './components/Signup'
+// import Signup from './components/Signup'
 
 
 const reducer = combineReducers({

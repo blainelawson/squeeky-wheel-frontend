@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import { logout } from "../actions/currentUser"
-import '../App.css'
+// import '../App.css'
 
 import { Button } from 'semantic-ui-react'
 
