@@ -21,13 +21,19 @@ class Login extends React.Component {
         this.props.login(this.props.loginFormData, this.props.history)
     }
 
+    handleDemo = () => {
+        this.props.loginFormData.username = "blainelawson0"
+        this.props.loginFormData.password = "password"
+        this.props.login(this.props.loginFormData, this.props.history)
+    }
+
     render(){
         return (
             <li className="login">
                 <form onSubmit={this.handleSubmit}>
                     <Input type="text" name="username" value={this.props.loginFormData.username} onChange={event => this.handleInputChange(event)} placeholder="username" />
                     <Input type="text" name="password" value={this.props.loginFormData.password} onChange={event => this.handleInputChange(event)} placeholder="password" />
-                    <Button onClick={this.handleSubmit} primary>Log In</Button> or <Button secondary>Sign Up</Button>
+                    <Button id="loginSubmit" onClick={this.handleSubmit} primary>Log In</Button> <Button onClick={this.handleDemo} color="youtube">Demo</Button> or <Button secondary>Sign Up</Button>
                 </form>
             </li>
         )
